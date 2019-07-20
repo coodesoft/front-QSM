@@ -7,6 +7,7 @@ import { FormRegistroComponent } from './form-registro/form-registro.component';
 import { FormPreguntaComponent } from './form-pregunta/form-pregunta.component';
 import { VistaRespuestaComponent } from './vista-respuesta/vista-respuesta.component';
 import { VistaPremioComponent } from './vista-premio/vista-premio.component';
+import { FormMarcaModeloComponent } from './form-marca-modelo/form-marca-modelo.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { VistaPremioComponent } from './vista-premio/vista-premio.component';
     FormRegistroComponent,
     FormPreguntaComponent,
     VistaRespuestaComponent,
-    VistaPremioComponent
+    VistaPremioComponent,
+    FormMarcaModeloComponent
   ],
   imports: [
     BrowserModule,
