@@ -10,6 +10,9 @@ import { VistaPremioComponent } from './vista-premio/vista-premio.component';
 import { FormMarcaModeloComponent } from './form-marca-modelo/form-marca-modelo.component';
 import { PantallaInicioComponent } from './pantalla-inicio/pantalla-inicio.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,9 @@ import { PantallaInicioComponent } from './pantalla-inicio/pantalla-inicio.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

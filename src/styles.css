@@ -1,7 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-body{
-    background-image: url("/assets/img/fondo.jpg");
-    background-size: cover;
-    height: 100vh;
-    background-attachment: fixed;
+body{ margin: 0px; }
+
+.main-div{
+  position: relative;
+  width:1920px; height:1080px;
+  background-image: url("/assets/img/fondo.jpg");    background-size: cover;
 }
+
+.img-cont img {
+  position: absolute;
+  left: 369px; top:0px;
+}
+
+.img-cont { width:1920px; height:1080px; }
