@@ -7,9 +7,6 @@ body{ margin: 0px; }
   background-image: url("/assets/img/fondo.jpg");    background-size: cover;
 }
 
-.img-cont img {
-  position: absolute;
-  left: 369px; top:0px;
-}
-
+.img-logo    { position: absolute; left: 369px; top:0px; }
+.img-sekurit { position: absolute; left: 130px; top:0px; }
 .img-cont { width:1920px; height:1080px; }
