@@ -8,6 +8,16 @@ body{ margin: 0px; }
 }
 
 .img-logo    { position: absolute; left: 369px; top:0px; }
-.img-logo-gr { position: absolute; left: 471px; top:-106px; height: auto; width: 900px; }  
+.img-logo-gr { position: absolute; left: 471px; top:-106px; height: auto; width: 900px; }
 .img-sekurit { position: absolute; left: 130px; top:0px; }
 .img-cont { width:1920px; height:1080px; }
+
+.input-cont { position:absolute; width:1920px; top:668px; }
+.app-input  { display: inline-block; position: relative; margin-bottom: 31px;}
+.app-input input {
+  position: absolute;
+  top: 31px; height: 50px;
+  border: none; background: none;
+  color: #fff; font-size: 36px;
+}
+.app-input-inner { position: relative; }
