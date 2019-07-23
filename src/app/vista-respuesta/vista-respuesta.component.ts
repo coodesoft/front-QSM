@@ -8,6 +8,8 @@ import { Router }            from '@angular/router';
 })
 export class VistaRespuestaComponent implements OnInit {
 
+  private acertada:boolean = true;
+
   constructor(
     private router: Router
   ) { }

@@ -1,4 +1,23 @@
 <div class="img-cont" (click)="goToPregunta()">
+    <img *ngIf="acertada" class="img-acierto" src="assets/img/fondo-ok.png" />
     <img class="img-logo-gr" src="assets/img/logo.png" />
     <img class="img-sekurit" src="assets/img/sekurit.png" />
+</div>
+
+<div class="resp-cont">
+  <div class="app-input-inner">
+    <div class="app-input">
+      <div class="app-input-inner">
+        <div *ngIf="acertada" class="app-resp-title">Tu respuesta es ¡correcta!</div>
+        <div *ngIf="!acertada" class="app-resp-title">Respuesta incorrecta</div>
+      </div>
+    </div>
+
+    <div class="app-input">
+      <div class="app-desc-cont">
+        <div class="app-desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum vel magna at cursus. Quisque vulputate faucibus odio, sit amet consectetur erat hendrerit et. Phasellus nisl purus, pretium at velit lobortis, laoreet scelerisque mauris. Vivamus pretium nibh vitae turpis bibendum eleifend. Integer mattis blandit erat. Integer blandit, enim sed ullamcorper dignissim, nunc nunc aliquet lorem, at dictum dolor sem a lacus. Sed volutpat, erat in tempus aliquet, sapien orci faucibus lacus, nec interdum tellus erat molestie nibh. Suspendisse quis elit vulputate, fringilla lorem sed, maximus libero. Aliquam pretium erat ut ipsum venenatis, eget condimentum eros scelerisque. </div>
+      </div>
+    </div>
+
+  </div>
 </div>
