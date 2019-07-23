@@ -1,9 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: Gotham-bold;
-    font-weight: bold;
-    src: url("/assets/fonts/Gotham-Bold.otf") format("opentype");
+    font-family: Gotham-bold; font-weight: bold;  src: url("/assets/fonts/Gotham-Bold.otf") format("opentype");
 }
+@font-face {
+    font-family: Gotham-light; font-weight: lighter;  src: url("/assets/fonts/Gotham-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: Gotham-BookItalic;  src: url("/assets/fonts/Gotham-BookItalic.otf") format("opentype");
+}
+@font-face {
+    font-family: Gotham-black;  src: url("/assets/fonts/Gotham-Black.otf") format("opentype");
+}
+
 
 body{ margin: 0px; }
 
@@ -24,8 +32,31 @@ body{ margin: 0px; }
   position: absolute;
   top: 31px; height: 50px;
   border: none; background: none;
+  font-family: Gotham-light;
   color: #fff; font-size: 36px;
 }
 .app-input-inner { position: relative; }
+
+.app-input-ps {
+  position: absolute;
+  top: 23px;
+  color:#fff; font-family: Gotham-BookItalic;
+  font-size:25px; text-transform: uppercase;
+}
+.app-input-ps-l {  color:#a77846; font-size:35px; font-family: Gotham-black; }
+.app-input-ps-l, .app-input-ps-o { display: inline-block; }
+.app-input-ps-o div { position: absolute; width: 674px; bottom: 4px; left: 45px; }
+
+.app-input-title {
+  text-align:center; width:1920px;
+  position:absolute; top:30px;
+  text-transform: uppercase;
+  color:#fff; font-size: 45px; font-family: Gotham-bold;
+}
+
+.num-pregunta{ top: 218px; left: 952px;position:absolute; color:#a77846; font-size:52px; font-family: Gotham-black; }
+
+.comodines-cont {position: absolute; top: 120px;right: 100px;}
+.comodin { margin-bottom: 35px;}
 
 h2{ color:#fff; font-size: 62px; margin:0px; font-family: Gotham-bold; }
