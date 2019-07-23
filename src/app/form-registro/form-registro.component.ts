@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
+
+import { Jugador }          from './../models/jugador';
+import { JugadoresService } from './../services/jugadores.service';
 
 @Component({
   selector: 'app-form-registro',
@@ -9,12 +11,22 @@ import { Router } from '@angular/router';
 })
 export class FormRegistroComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  private jugador:Jugador = new Jugador();
+
+  constructor(
+    private router:    Router,
+    private jugadores: JugadoresService
+  ) { }
 
   ngOnInit() {
   }
 
   goToMarcaModelo() {
-    this.router.navigateByUrl('/marca-modelo');
+    if (this.jugador.isValid()){
+      this.jugadores.addJugador(this.jugador);
+      this.router.navigateByUrl('/marca-modelo');
+    } else {
+      alert(this.jugador.getErrors());
+    }
   }
 }

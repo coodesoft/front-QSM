@@ -1,5 +1,5 @@
 export class Pregunta {
-  private acertada:boolean = false;
+  public acertada:boolean = false;
 
-  private tipo:number = 3;
+  public tipo:number = 3;
 }
