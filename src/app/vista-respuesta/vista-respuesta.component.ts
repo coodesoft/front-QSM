@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
 
 @Component({
   selector: 'app-vista-respuesta',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaRespuestaComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  goToPregunta(){
+      this.router.navigateByUrl('/pregunta');
   }
 
 }
