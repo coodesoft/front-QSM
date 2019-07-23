@@ -1,84 +1,50 @@
-{
-  "preguntas":[
+[
+    {
+      "titulo":"Seleccioná la marca de tu auto y modelo, y si tu auto es Sekurit ganás un comodín.",
+      "r-c":-1, "t":1,
+      "opciones":[
+        { "k1":"Peugeot","k2":["208","2008","301","308","Partner","408"] },
+        { "k1":"Renault", "k2":["Nuevo Sandero","Kwid","Duster","Nuevo Logan","Captur","Kangoo ii","Duster Oroch"] },
+        { "k1":"Volkswagen", "k2":"Tiguan Allspace" },
+        { "k1":"Nissan", "k2":["Note", "Versa", "Frontier"] },
+        { "k1":"Mercedes Benz", "k2":["CLA200"] },
+        { "k1":"Jeep", "k2":["Renegade","Compass"]  },
+        { "k1":"Honda", "k2":["WR-V"] },
+        { "k1":"Ford", "k2":["Fiesta Kinetic", "Transit"] },
+        { "k1":"Fiat", "k2":["Cronos","Argo","Mobi","UNO","Tipo", "Strada", "Toro"] },
+        { "k1":"Citroen", "k2":["C3 AIRCROSS","C4 Lounge","C - ELYSEE"] },
+        { "k1":"Audi", "k2":["A1"] },
+        { "k1":"RAM",  "k2":["1500"] }],
+      "explicacion":"Los parabrisas de nuestros coches se encuentran constantemente sometidos a tensiones debido a una serie de factores, materiales y físicos, que se combinan en su actuación."
+    },
     {
       "titulo":"¿Qué es Sekurit? ¿A qué se dedica Sekurit?",
       "r-c":3, "t":1,
-      "respuestas":["Venta de Repuestos de Autos","Fabricación de repuestos originales de autos","Fabricación y venta de insumos para autos","Fabricación de cristales originales para el automóvil"],
+      "opciones":["Venta de Repuestos de Autos","Fabricación de repuestos originales de autos","Fabricación y venta de insumos para autos","Fabricación de cristales originales para el automóvil"],
       "explicacion":"Saint-Gobain Sekurit aporta soluciones que mejoran la seguridad, proporcionan confortdiario y responden a las demandas de la industria automotriz en terminios de evolución, usos, regulaciones y sostenibilidad. <br><br> Saint-Gobain Sekurit es líder en la fabricación de cristales originales para el mercado automotriz en Latinoamérica."
     },
     {
       "titulo":"Indicar cuáles de las siguientes automotrices eligen Sekurit como equipo orginal:",
       "r-c":3, "t":1,
-      "respuestas":["Peogeot y Fiat","Mercedes Benz y Citroen","BMW y Renault","Todas las anteriores"],
-      "explicacion":"1 de cada 2 autos tiene cristales originales Sekurit. Las principales marcas automotrices nos eligen como proveedor oficial de cristales originales."
+      "opciones":["Peogeot y Fiat","Mercedes Benz y Citroen","BMW y Renault","Todas las anteriores"],
+      "explicacion":"1 de cada 2 autos tiene cristales originales Sekurit. Las principales k1s automotrices nos eligen como proveedor oficial de cristales originales."
     },
     {
       "titulo":"Sekurit cuenta con producción nacional, ¿Dónde se encuentran ubicadas las fábricas en Argentina?",
       "r-c":0, "t":1,
-      "respuestas":["Buenos Aires y Córdoba","Misiones y Buenos Aires","Córdoba y Santa Fé","Todas las anteriores"],
+      "opciones":["Buenos Aires y Córdoba","Misiones y Buenos Aires","Córdoba y Santa Fé","Todas las anteriores"],
       "explicacion":"Sekurit está presente en 19 países con 42 plantas y 8 centros de I&D. En Argentina cuenta con 2 plantas (Campana y Córdoba) y un centro logístico (Tortuguitas) con cobertura a nivel nacional."
     },
     {
       "titulo":"¿Cuáles de estas innovaciones fue desarrollada por Sekurit?",
       "r-c":3, "t":2,
-      "respuestas":["Templado y laminado acústico","Clima Coat","Tecnología electrocrómica","Todas las anteriores"],
+      "opciones":["Templado y laminado acústico","Clima Coat","Tecnología electrocrómica","Todas las anteriores"],
       "explicacion":"Como parte del Grupo Saint-Gobain, con 350 años de experiencia en ingeniería y un compromiso decidido con la innovación, Saint-Gobain Sekurit es uno de los fabricantes de cristales líderes en el mundo desde hace más de 80 años. Suministramos productos y servicios con un alto valor añadido en tres mercados: vidrios para automóviles instalados originalmente por los fabricantes de automóviles (OEM) recambios de vidrios para automóviles (aftermarket).  vidrios para vehículos de transporte (autobuses, camiones, aeronáutica). "
     },
     {
       "titulo":"¿Cuál es el cristal del vehículo con mayor tasa de rotura?",
       "r-c":2, "t":2,
-      "respuestas":["Lunetas","Laterales Traseros","Parabrisas","Laterales Delanteros"],
+      "opciones":["Lunetas","Laterales Traseros","Parabrisas","Laterales Delanteros"],
       "explicacion":"Los parabrisas de nuestros coches se encuentran constantemente sometidos a tensiones debido a una serie de factores, materiales y físicos, que se combinan en su actuación."
     }
-  ],
-  "autos":[
-    {
-      "marca":"Peugeot",
-      "modelos":["208","2008","301","308","Partner","408"]
-    },
-    {
-      "marca":"Renault",
-      "modelos":["Nuevo Sandero","Kwid","Duster","Nuevo Logan","Captur","Kangoo ii","Duster Oroch"]
-    },
-    {
-      "marca":"Volkswagen",
-      "modelos":"Tiguan Allspace"
-    },
-    {
-      "marca":"Nissan",
-      "modelos":["Note", "Versa", "Frontier"]
-    },
-    {
-      "marca":"Mercedes Benz",
-      "modelos":["CLA200"]
-    },
-    {
-      "marca":"Jeep",
-      "modelos":["Renegade","Compass"]
-    },
-    {
-      "marca":"Honda",
-      "modelos":["WR-V"]
-    },
-    {
-      "marca":"Ford",
-      "modelos":["Fiesta Kinetic", "Transit"]
-    },
-    {
-      "marca":"Fiat",
-      "modelos":["Cronos","Argo","Mobi","UNO","Tipo", "Strada", "Toro"]
-    },
-    {
-      "marca":"Citroen",
-      "modelos":["C3 AIRCROSS","C4 Lounge","C - ELYSEE"]
-    },
-    {
-      "marca":"Audi",
-      "modelos":["A1"]
-    },
-    {
-      "marca":"RAM",
-      "modelos":["1500"]
-    }
-  ]
-}
+]

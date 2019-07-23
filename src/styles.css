@@ -8,5 +8,6 @@ body{ margin: 0px; }
 }
 
 .img-logo    { position: absolute; left: 369px; top:0px; }
+.img-logo-gr { position: absolute; left: 471px; top:-106px; height: auto; width: 900px; }  
 .img-sekurit { position: absolute; left: 130px; top:0px; }
 .img-cont { width:1920px; height:1080px; }

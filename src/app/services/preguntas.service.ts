@@ -8,8 +8,10 @@ import { HttpClient } from '@angular/common/http';
 export class PreguntasService {
 
   private preguntas:any;
-  private pLoaded:boolean     = false;
-  private urlPreguntas:string = 'assets/config/preguntas.json';
+  private pLoaded:boolean       = false;
+  private urlPreguntas:string   = 'assets/config/preguntas.json';
+  private preguntaActual:number = -1;
+  private comodines:any         = [];
 
   constructor(
     private http:   HttpClient
@@ -22,5 +24,14 @@ export class PreguntasService {
       data => { this.preguntas = data; return this.preguntas; },
       err  => { return false; }
     );
+  }
+
+  getSigPregunta(){
+    this.preguntaActual ++;
+    return this.preguntas[this.preguntaActual];
+  }
+
+  getComodines(){
+    return this.comodines;
   }
 }
