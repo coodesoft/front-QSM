@@ -1,15 +1,15 @@
 <div class="img-cont" (click)="goToPregunta()">
-    <img *ngIf="pregunta.acertada" class="img-acierto" src="assets/img/fondo-ok.png" />
+    <img *ngIf="respuesta.acertada" class="img-acierto" src="assets/img/fondo-ok.png" />
     <img class="img-logo-gr" src="assets/img/logo.png" />
     <img class="img-sekurit" src="assets/img/sekurit.png" />
 </div>
 
-<div class="resp-cont" *ngIf="pregunta.tipo!=3">
+<div class="resp-cont" *ngIf="respuesta.tipo!=3">
   <div class="app-input-inner">
     <div class="app-input">
       <div class="app-input-inner">
-        <div *ngIf="pregunta.acertada" class="app-resp-title">Tu respuesta es ¡correcta!</div>
-        <div *ngIf="!pregunta.acertada" class="app-resp-title">Respuesta incorrecta</div>
+        <div *ngIf="respuesta.acertada" class="app-resp-title">Tu respuesta es ¡correcta!</div>
+        <div *ngIf="!respuesta.acertada" class="app-resp-title">Respuesta incorrecta</div>
       </div>
     </div>
 
@@ -22,22 +22,22 @@
   </div>
 </div>
 
-<div class="resp-cont" *ngIf="pregunta.tipo==3">
+<div class="resp-cont" *ngIf="respuesta.tipo==3">
   <div class="app-input-inner">
     <div class="app-input">
       <div class="app-input-inner">
-        <div *ngIf="pregunta.acertada"  style="text-align:center;margin-top: 51px; width:1920px;"><h2>¡FELICITACIONES!</h2></div>
-        <div *ngIf="!pregunta.acertada" style="text-align:center;margin-top: 51px; width:1920px;"><h2>¡UPS! TU AUTO NO TIENE</h2><h2> CRISTALES SEKURIT</h2></div>
+        <div *ngIf="respuesta.acertada"  style="text-align:center;margin-top: 51px; width:1920px;"><h2>¡FELICITACIONES!</h2></div>
+        <div *ngIf="!respuesta.acertada" style="text-align:center;margin-top: 51px; width:1920px;"><h2>¡UPS! TU AUTO NO TIENE</h2><h2> CRISTALES SEKURIT</h2></div>
       </div>
     </div>
 
     <div class="app-input">
-      <div *ngIf="pregunta.acertada"  class="app-input-inner"> <img src="assets/img/f2/i3.png"/></div>
-      <div *ngIf="!pregunta.acertada" class="app-input-inner"> <img src="assets/img/f2/i5.png"/></div>
+      <div *ngIf="respuesta.acertada"  class="app-input-inner"> <img src="assets/img/f2/i3.png"/></div>
+      <div *ngIf="!respuesta.acertada" class="app-input-inner"> <img src="assets/img/f2/i5.png"/></div>
     </div>
 
     <div class="app-input">
-      <div *ngIf="pregunta.acertada" class="app-input-inner"><img src="assets/img/f2/i4.png"/> </div>
+      <div *ngIf="respuesta.acertada" class="app-input-inner"><img src="assets/img/f2/i4.png"/> </div>
     </div>
   </div>
 </div>

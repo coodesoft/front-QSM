@@ -24,7 +24,7 @@ export class FormRegistroComponent implements OnInit {
   goToMarcaModelo() {
     if (this.jugador.isValid()){
       this.jugadores.addJugador(this.jugador);
-      this.router.navigateByUrl('/marca-modelo');
+      this.router.navigateByUrl('/pregunta');
     } else {
       alert(this.jugador.getErrors());
     }

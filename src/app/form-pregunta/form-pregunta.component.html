@@ -3,13 +3,13 @@
     <img class="img-sekurit" src="assets/img/sekurit.png" />
 </div>
 
-<div class="comodines-cont">
+<div class="comodines-cont" *ngIf="pregunta.tipo != 3">
   <div class="comodin"><img src="assets/img/btn/50-50.png" /></div>
   <div class="comodin"><img src="assets/img/btn/lg.png" /></div>
   <div class="comodin"><img src="assets/img/btn/m1.png" /></div>
 </div>
 
-<div class="input-cont">
+<div class="input-cont" *ngIf="pregunta.tipo != 3">
   <div class="app-input-inner">
     <div class="app-input">
       <div class="app-input-inner">
@@ -34,6 +34,30 @@
       </div>
     </div>
 
-    <div class="num-pregunta">1</div>
+    <div class="num-pregunta">{{pregunta_actual}}</div>
+  </div>
+</div>
+
+<div class="input-cont" *ngIf="pregunta.tipo == 3">
+  <div class="app-input-inner">
+    <div class="app-input">
+      <div class="app-input-inner">
+        <div style="text-align:center; width:1920px;"><h2>¡GANÁ UN COMODÍN EXTRA SEKURIT!</h2></div>
+      </div>
+    </div>
+
+    <div class="app-input">
+      <div class="app-input-inner">
+        <img src="assets/img/f2/i1.png"/>
+      </div>
+    </div>
+
+    <div class="app-input">
+      <div class="app-input-inner">
+        <img src="assets/img/f2/i2.png"/>
+        <input style="top:18px; left: 287px; width: 580px;" type="text" [(ngModel)]="pregunta.k1">
+        <input style="top:18px; left: 1246px; width: 540px;" type="text" [(ngModel)]="pregunta.k2">
+      </div>
+    </div>
   </div>
 </div>

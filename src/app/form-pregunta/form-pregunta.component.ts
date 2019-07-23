@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
 import { Pregunta } from './../models/pregunta';
+import { PreguntasService } from './../services/preguntas.service';
 
 @Component({
   selector: 'app-form-pregunta',
@@ -11,16 +12,25 @@ import { Pregunta } from './../models/pregunta';
 export class FormPreguntaComponent implements OnInit {
 
   private pregunta:Pregunta = new Pregunta();
+  private pregunta_actual:number = 0;
 
   constructor(
-    private router: Router
+    private router:    Router,
+    private preguntas: PreguntasService
   ) { }
 
   ngOnInit() {
+    this.pregunta        = new Pregunta(this.preguntas.getSigPregunta());
+    this.pregunta_actual = this.preguntas.getNumberActual();
   }
 
   goToRespuesta(){
-    this.router.navigateByUrl('/respuesta');
+    if (this.pregunta.isValid()){
+      this.preguntas.setRespuesta(this.pregunta);
+      this.router.navigateByUrl('/respuesta');
+    } else {
+      alert(this.pregunta.getErrors());
+    }
   }
 
 }
