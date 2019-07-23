@@ -25,12 +25,18 @@ export class FormPreguntaComponent implements OnInit {
   }
 
   goToRespuesta(){
+
     if (this.pregunta.isValid()){
       this.preguntas.setRespuesta(this.pregunta);
       this.router.navigateByUrl('/respuesta');
     } else {
       alert(this.pregunta.getErrors());
     }
+  }
+
+  setRespuesta(n){
+    this.pregunta.opcion_elegida = n;
+    this.goToRespuesta();
   }
 
 }

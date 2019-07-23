@@ -1,16 +1,18 @@
 export class Pregunta {
   public tipo:number = 3;
-  public opcion_elegida:number = -1;
+  public opcion_elegida:number = -2;
   public k1:string = '';
   public k2:string = '';
   public titulo:string = '';
   public explicacion:string = '';
+  public opciones:any = {};
 
   constructor(e:any = ''){
     if (e!='') {
       this.tipo        = e.t;
       this.titulo      = e.titulo;
       this.explicacion = e.explicacion;
+      this.opciones    = e.opciones;
     }
   }
 

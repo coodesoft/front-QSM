@@ -1,4 +1,4 @@
-<div class="img-cont" (click)="goToRespuesta()">
+<div class="img-cont" (click)="goToRespuesta(-1)">
     <img class="img-logo-gr" src="assets/img/logo.png" />
     <img class="img-sekurit" src="assets/img/sekurit.png" />
 </div>
@@ -14,23 +14,23 @@
     <div class="app-input">
       <div class="app-input-inner">
         <img src="assets/img/p1/t1.png"/>
-        <div class="app-input-title">Titulo pregunta</div>
+        <div class="app-input-title">{{pregunta.titulo}}</div>
       </div>
     </div>
 
     <div class="app-input">
       <div class="app-input-inner">
         <img src="assets/img/p1/o1.png"/>
-        <div class="app-input-ps" style="left:150px"><div class="app-input-ps-l">A:</div><div class="app-input-ps-o"><div> opcion 1</div></div></div>
-        <div class="app-input-ps" style="left:1070px"><div class="app-input-ps-l">B:</div><div class="app-input-ps-o"><div> opcion 2</div></div></div>
+        <div class="app-input-ps" style="left:150px"  (click)="setRespuesta(0)"><div class="app-input-ps-l">A:</div><div class="app-input-ps-o"><div>{{pregunta.opciones[0]}}</div></div></div>
+        <div class="app-input-ps" style="left:1070px" (click)="setRespuesta(1)"><div class="app-input-ps-l">B:</div><div class="app-input-ps-o"><div>{{pregunta.opciones[1]}}</div></div></div>
       </div>
     </div>
 
     <div class="app-input">
       <div class="app-input-inner">
         <img src="assets/img/p1/o1.png"/>
-        <div class="app-input-ps" style="left:150px"><div class="app-input-ps-l">C:</div><div class="app-input-ps-o"><div> opcion 3</div></div></div>
-        <div class="app-input-ps" style="left:1070px"><div class="app-input-ps-l">D:</div><div class="app-input-ps-o"><div> opcion 4</div></div></div>
+        <div class="app-input-ps" style="left:150px"  (click)="setRespuesta(2)"><div class="app-input-ps-l">C:</div><div class="app-input-ps-o"><div>{{pregunta.opciones[2]}}</div></div></div>
+        <div class="app-input-ps" style="left:1070px" (click)="setRespuesta(3)"><div class="app-input-ps-l">D:</div><div class="app-input-ps-o"><div>{{pregunta.opciones[3]}}</div></div></div>
       </div>
     </div>
 

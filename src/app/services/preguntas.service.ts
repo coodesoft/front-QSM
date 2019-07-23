@@ -14,6 +14,7 @@ export class PreguntasService {
   private preguntaActual:number = -1;
   private comodines:any         = [];
   private ultima_respuesta:any;
+  private respuestas_correctas  = 0;
 
   constructor(
     private http:   HttpClient
@@ -56,6 +57,10 @@ export class PreguntasService {
           }
         }
     }
+
+    if (this.preguntas[this.preguntaActual].t != 3 && this.preguntas[this.preguntaActual]['r-c'] == this.ultima_respuesta.opcion_elegida) { e = true; }
+
+    if (e && this.preguntas[this.preguntaActual].t != 3) { this.respuestas_correctas++; }
 
     r.acertada = e;
     return r;
