@@ -1,7 +1,7 @@
 [
     {
       "titulo":"Seleccioná la marca de tu auto y modelo, y si tu auto es Sekurit ganás un comodín.",
-      "r-c":-1, "t":1,
+      "r-c":-1, "t":3,
       "opciones":[
         { "k1":"Peugeot","k2":["208","2008","301","308","Partner","408"] },
         { "k1":"Renault", "k2":["Nuevo Sandero","Kwid","Duster","Nuevo Logan","Captur","Kangoo ii","Duster Oroch"] },

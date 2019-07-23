@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
+import { Pregunta } from './../models/pregunta';
+
 @Component({
   selector: 'app-vista-respuesta',
   templateUrl: './vista-respuesta.component.html',
@@ -8,7 +10,7 @@ import { Router }            from '@angular/router';
 })
 export class VistaRespuestaComponent implements OnInit {
 
-  private acertada:boolean = true;
+  private pregunta:Pregunta = new Pregunta();
 
   constructor(
     private router: Router
