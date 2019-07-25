@@ -8,16 +8,16 @@ import { Respuesta }  from './../models/respuesta';
 })
 export class PreguntasService {
 
-  private preguntas:any;
-  private pLoaded:boolean       = false;
-  private urlPreguntas:string   = 'assets/config/preguntas.json';
-  private preguntaActual:number = -1;
-  private comodines:any         = [];
-  private ultima_respuesta:any;
-  private respuestas_correctas  = 0;
+  public preguntas:any;
+  public pLoaded:boolean       = false;
+  public urlPreguntas:string   = 'assets/config/preguntas.json';
+  public preguntaActual:number = -1;
+  public comodines:any         = [];
+  public ultima_respuesta:any;
+  public respuestas_correctas  = 0;
 
   constructor(
-    private http:   HttpClient
+    public http:   HttpClient
   ) {  }
 
   getPreguntas(){

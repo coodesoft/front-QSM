@@ -11,11 +11,11 @@ import { JugadoresService } from './../services/jugadores.service';
 })
 export class FormRegistroComponent implements OnInit {
 
-  private jugador:Jugador = new Jugador();
+  public jugador:Jugador = new Jugador();
 
   constructor(
-    private router:    Router,
-    private jugadores: JugadoresService
+    public router:    Router,
+    public jugadores: JugadoresService
   ) { }
 
   ngOnInit() {

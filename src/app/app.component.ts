@@ -11,7 +11,7 @@ export class AppComponent {
   title = '¿Quién quiere ser Original?';
 
   constructor (
-    private preguntaS:PreguntasService
+    public preguntaS:PreguntasService
   ){
     this.preguntaS.getPreguntas();
   }

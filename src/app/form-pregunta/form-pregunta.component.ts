@@ -11,12 +11,12 @@ import { PreguntasService } from './../services/preguntas.service';
 })
 export class FormPreguntaComponent implements OnInit {
 
-  private pregunta:Pregunta = new Pregunta();
-  private pregunta_actual:number = 0;
+  public pregunta:Pregunta = new Pregunta();
+  public pregunta_actual:number = 0;
 
   constructor(
-    private router:    Router,
-    private preguntas: PreguntasService
+    public router:    Router,
+    public preguntas: PreguntasService
   ) { }
 
   ngOnInit() {

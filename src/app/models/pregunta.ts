@@ -16,7 +16,7 @@ export class Pregunta {
     }
   }
 
-  private errors:string = '';
+  public errors:string = '';
   public getErrors() { return this.errors; }
 
   isValid(){

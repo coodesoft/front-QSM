@@ -11,11 +11,11 @@ import { Respuesta }        from './../models/respuesta';
 })
 export class VistaRespuestaComponent implements OnInit {
 
-  private respuesta = new Respuesta();
+  public respuesta = new Respuesta();
 
   constructor(
-    private router: Router,
-    private preguntas: PreguntasService
+    public router: Router,
+    public preguntas: PreguntasService
   ) { }
 
   ngOnInit() {

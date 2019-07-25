@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class JugadoresService {
 
-  private jugadores:any = [];
+  public jugadores:any = [];
 
   constructor() { }
 
