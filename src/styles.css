@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: Gotham-bold; font-weight: bold;  src: url("/assets/fonts/Gotham-Bold.otf") format("opentype");
+    font-family: Gotham-bold; font-weight: bold;  src: url("./assets/fonts/Gotham-Bold.otf") format("opentype");
 }
 @font-face {
-    font-family: Gotham-light; font-weight: lighter;  src: url("/assets/fonts/Gotham-Light.otf") format("opentype");
+    font-family: Gotham-light; font-weight: lighter;  src: url("./assets/fonts/Gotham-Light.otf") format("opentype");
 }
 @font-face {
-    font-family: Gotham-BookItalic;  src: url("/assets/fonts/Gotham-BookItalic.otf") format("opentype");
+    font-family: Gotham-BookItalic;  src: url("./assets/fonts/Gotham-BookItalic.otf") format("opentype");
 }
 @font-face {
-    font-family: Gotham-black;  src: url("/assets/fonts/Gotham-Black.otf") format("opentype");
+    font-family: Gotham-black;  src: url("./assets/fonts/Gotham-Black.otf") format("opentype");
 }
 
 
@@ -18,7 +18,7 @@ body{ margin: 0px; }
 .main-div{
   position: relative;
   width:1920px; height:1080px;
-  background-image: url("/assets/img/fondo.jpg");    background-size: cover;
+  background-image: url("./assets/img/fondo.jpg");    background-size: cover;
 }
 
 .img-logo    { position: absolute; left: 369px; top:0px; }
