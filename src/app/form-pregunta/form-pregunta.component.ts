@@ -34,6 +34,20 @@ export class FormPreguntaComponent implements OnInit {
     }
   }
 
+  getTextSizeOp(t){
+    let s ='25px';
+    if (String(t).length > 35){ s='24px'; }
+    if (String(t).length > 46){ s='20px'; }
+    return s;
+  }
+
+  getTextSizeTit(t){
+    let s = '45px';
+    if (String(t).length > 50){ s='30px'; }
+    if (String(t).length > 90){ s='25px'; }
+    return s;
+  }
+
   setRespuesta(n){
     this.pregunta.opcion_elegida = n;
     this.goToRespuesta();
