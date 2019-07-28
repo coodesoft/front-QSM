@@ -1,4 +1,4 @@
-<div class="img-cont" (click)="goToRespuesta()">
+<div class="img-cont">
     <img class="img-logo-gr" src="assets/img/logo.png" />
     <img class="img-sekurit" src="assets/img/sekurit.png" />
 </div>
@@ -7,6 +7,10 @@
   <div class="comodin"><img src="assets/img/btn/50-50.png" /></div>
   <div class="comodin"><img src="assets/img/btn/lg.png" /></div>
   <div class="comodin"><img src="assets/img/btn/m1.png" /></div>
+</div>
+
+<div class="btn-nav-cont">
+  <div class="comodin"><img (click)="goToRespuesta()" src="assets/img/p1/s1.png" /></div>
 </div>
 
 <div class="input-cont" *ngIf="pregunta.tipo != 3">
