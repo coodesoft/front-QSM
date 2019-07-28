@@ -4,12 +4,12 @@
 </div>
 
 <div class="comodines-cont" *ngIf="pregunta.tipo != 3">
-  <div class="comodin"><img src="assets/img/btn/50-50.png" /></div>
-  <div class="comodin"><img src="assets/img/btn/lg.png" /></div>
-  <div class="comodin"><img src="assets/img/btn/m1.png" /></div>
+  <div class="comodin" *ngIf="preguntas.comodines[0].e" (click)="comodin(0)"><img src="assets/img/btn/50-50.png" /></div>
+  <div class="comodin" *ngIf="preguntas.comodines[1].e" (click)="comodin(1)"><img src="assets/img/btn/lg.png" /></div>
+  <div class="comodin" *ngIf="preguntas.comodines[2].e" (click)="comodin(2)"><img src="assets/img/btn/m1.png" /></div>
 </div>
 
-<div class="btn-nav-cont">
+<div class="btn-nav-cont" *ngIf="pregunta.tipo == 3">
   <div class="comodin"><img (click)="goToRespuesta()" src="assets/img/p1/s1.png" /></div>
 </div>
 

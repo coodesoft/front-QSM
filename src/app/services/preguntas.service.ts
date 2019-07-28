@@ -12,7 +12,7 @@ export class PreguntasService {
   public pLoaded:boolean       = false;
   public urlPreguntas:string   = 'assets/config/preguntas.json';
   public preguntaActual:number = -1;
-  public comodines:any         = [];
+  public comodines:any         = [{'e':true},{'e':true},{'e':false}];
   public ultima_respuesta:any;
   public respuestas_correctas  = 0;
 
@@ -61,6 +61,8 @@ export class PreguntasService {
     if (this.preguntas[this.preguntaActual].t != 3 && this.preguntas[this.preguntaActual]['r-c'] == this.ultima_respuesta.opcion_elegida) { e = true; }
 
     if (e && this.preguntas[this.preguntaActual].t != 3) { this.respuestas_correctas++; }
+
+    if (e && this.preguntas[this.preguntaActual].t == 3) { this.comodines[2].e = true; } 
 
     r.acertada = e;
     return r;

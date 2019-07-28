@@ -62,7 +62,7 @@ body{ margin: 0px; }
 
 .num-pregunta{ top: 218px; left: 952px;position:absolute; color:#a77846; font-size:52px; font-family: Gotham-black; }
 
-.comodines-cont {position: absolute; top: 190px;right: 100px;}
+.comodines-cont {position: absolute; top: 120px;right: 100px;}
 .btn-nav-cont   {position: absolute; top: 50px;right: 100px;}
 .comodin { margin-bottom: 35px; cursor:pointer; }
 

@@ -33,6 +33,10 @@ export class FormPreguntaComponent implements OnInit {
       alert(this.pregunta.getErrors());
     }
   }
+  
+  comodin(c){
+
+  }
 
   getTextSizeOp(t){
     let s ='25px';
