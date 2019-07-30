@@ -12,7 +12,7 @@ export class PreguntasService {
   public pLoaded:boolean       = false;
   public urlPreguntas:string   = 'assets/config/preguntas.json';
   public preguntaActual:number = -1;
-  public comodines:any         = [{'e':true},{'e':true},{'e':false}];
+  public comodines:any         = [{'e':true, 'a':false},{'e':true},{'e':false}];
   public ultima_respuesta:any;
   public respuestas_correctas  = 0;
 
@@ -21,10 +21,31 @@ export class PreguntasService {
   ) {  }
 
   useComodin(c,p){
+    this.comodines[c].e = false;
+
     switch(c){
       case 0:
+        let n  = Math.floor(Math.random() * (20 - 0));
+        let o  = 'naana batman!';
+        let a1 = [];
+        for (let j=0; j < this.preguntas[this.preguntaActual].opciones.length; j++){
+          if (j != this.preguntas[this.preguntaActual]['r-c']){ a1.push(this.preguntas[this.preguntaActual].opciones[j]); }
+        }
+        o = a1[Math.floor(Math.random() * (2 - 0))];
+
+        this.comodines[c].a = true;
+        if (n >10) {
+          p.opciones = [{'e':true, 't':this.preguntas[this.preguntaActual].opciones[this.preguntas[this.preguntaActual]['r-c']]},
+                        {'e':true, 't':o}];
+          this.preguntas[this.preguntaActual]['r-c']=0;
+        } else {
+          p.opciones = [{'e':true, 't':o},
+                        {'e':true, 't':this.preguntas[this.preguntaActual].opciones[this.preguntas[this.preguntaActual]['r-c']]}];
+          this.preguntas[this.preguntaActual]['r-c']=1;
+        }
       break;
       case 1:
+
       break;
       case 2:
         this.ultima_respuesta.opcion_elegida = this.preguntas[this.preguntaActual]['r-c'];
@@ -78,7 +99,8 @@ export class PreguntasService {
 
     if (e && this.preguntas[this.preguntaActual].t == 3) { this.comodines[2].e = true; }
 
-    r.acertada = e;
+    this.comodines[0].a = false;
+    r.acertada          = e;
     return r;
   }
 }

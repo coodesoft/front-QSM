@@ -12,7 +12,10 @@ export class Pregunta {
       this.tipo        = e.t;
       this.titulo      = e.titulo;
       this.explicacion = e.explicacion;
-      this.opciones    = e.opciones;
+
+      for (let c=0; c < e.opciones.length; c++){
+        this.opciones[c] = {'e':true, 't':e.opciones[c]};
+      }
     }
   }
 
