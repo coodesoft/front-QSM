@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 
 import { HttpClientModule } from '@angular/common/http';
+import { PantallaFinalComponent } from './pantalla-final/pantalla-final.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormPreguntaComponent,
     VistaRespuestaComponent,
     VistaPremioComponent,
-    PantallaInicioComponent
+    PantallaInicioComponent,
+    PantallaFinalComponent
   ],
   imports: [
     BrowserModule,

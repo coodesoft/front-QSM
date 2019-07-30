@@ -6,13 +6,15 @@ import { PantallaInicioComponent }  from './pantalla-inicio/pantalla-inicio.comp
 import { VistaRespuestaComponent }  from './vista-respuesta/vista-respuesta.component';
 import { FormPreguntaComponent }    from './form-pregunta/form-pregunta.component';
 import { VistaPremioComponent }     from './vista-premio/vista-premio.component';
+import { PantallaFinalComponent }   from './pantalla-final/pantalla-final.component';
 
 const routes: Routes = [
-  { path: '',             component: PantallaInicioComponent },
-  { path: 'registro',     component: FormRegistroComponent },
-  { path: 'pregunta',     component: FormPreguntaComponent },
-  { path: 'respuesta',    component: VistaRespuestaComponent },
-  { path: 'premio1',      component: VistaPremioComponent },
+  { path: '',          component: PantallaInicioComponent },
+  { path: 'registro',  component: FormRegistroComponent },
+  { path: 'pregunta',  component: FormPreguntaComponent },
+  { path: 'respuesta', component: VistaRespuestaComponent },
+  { path: 'premio1',   component: VistaPremioComponent },
+  { path: 'final',     component: PantallaFinalComponent }
 ];
 
 @NgModule({

@@ -16,7 +16,7 @@ export class VistaPremioComponent implements OnInit {
   }
 
   retirarPremio(){
-
+    this.router.navigateByUrl('/final');
   }
 
   continuar(){

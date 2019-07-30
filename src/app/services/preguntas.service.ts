@@ -23,6 +23,12 @@ export class PreguntasService {
     public http:   HttpClient
   ) {  }
 
+  resetJuego(){
+    this.comodines            = [{'e':true, 'a':false},{'e':true},{'e':false}];
+    this.preguntaActual       = -1;
+    this.respuestas_correctas = 0;
+  }
+
   useComodin(c,p){
     this.comodines[c].e = false;
 
@@ -49,7 +55,7 @@ export class PreguntasService {
       break;
 
       case 1: //"la gente"
-          
+
       break;
 
       case 2: //Respuesta correcta
