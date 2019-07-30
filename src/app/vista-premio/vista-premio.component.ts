@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
 
 @Component({
   selector: 'app-vista-premio',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaPremioComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router:    Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  retirarPremio(){
+
+  }
+
+  continuar(){
+    this.router.navigateByUrl('/pregunta');
   }
 
 }

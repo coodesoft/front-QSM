@@ -23,7 +23,11 @@ export class VistaRespuestaComponent implements OnInit {
   }
 
   goToPregunta(){
-      this.router.navigateByUrl('/pregunta');
+      if (this.preguntas.respuestas_correctas == 3 && this.preguntas.preguntaActual == 3) {
+        this.router.navigateByUrl('/premio1');
+      } else {
+        this.router.navigateByUrl('/pregunta');
+      }
   }
 
 }

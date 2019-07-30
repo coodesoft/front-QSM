@@ -9,8 +9,11 @@ import { Respuesta }  from './../models/respuesta';
 export class PreguntasService {
 
   public preguntas:any;
+  public config:any;
   public pLoaded:boolean       = false;
+  public cLoaded:boolean       = false;
   public urlPreguntas:string   = 'assets/config/preguntas.json';
+  public urlConfig:string      = 'assets/config/config.json';
   public preguntaActual:number = -1;
   public comodines:any         = [{'e':true, 'a':false},{'e':true},{'e':false}];
   public ultima_respuesta:any;
@@ -24,7 +27,7 @@ export class PreguntasService {
     this.comodines[c].e = false;
 
     switch(c){
-      case 0:
+      case 0: //50:50
         let n  = Math.floor(Math.random() * (20 - 0));
         let o  = 'naana batman!';
         let a1 = [];
@@ -44,10 +47,12 @@ export class PreguntasService {
           this.preguntas[this.preguntaActual]['r-c']=1;
         }
       break;
-      case 1:
 
+      case 1: //"la gente"
+          
       break;
-      case 2:
+
+      case 2: //Respuesta correcta
         this.ultima_respuesta.opcion_elegida = this.preguntas[this.preguntaActual]['r-c'];
         return true;
       break;
@@ -58,8 +63,19 @@ export class PreguntasService {
   getPreguntas(){
     if (this.pLoaded) { return this.preguntas; }
 
+    this.getConfig();
+
     this.http.get( this.urlPreguntas ).subscribe(
-      data => { this.preguntas = data; return this.preguntas; },
+      data => { this.preguntas = data; this.pLoaded = true; return this.preguntas; },
+      err  => { return false; }
+    );
+  }
+
+  getConfig(){
+    if (this.cLoaded) { return this.config; }
+
+    this.http.get( this.urlConfig ).subscribe(
+      data => { this.config = data; this.cLoaded = true; return this.config; },
       err  => { return false; }
     );
   }
