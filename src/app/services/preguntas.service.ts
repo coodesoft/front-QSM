@@ -27,9 +27,7 @@ export class PreguntasService {
       case 1:
       break;
       case 2:
-        this.respuestas_correctas++;
-        this.preguntaActual ++;
-        this.ultima_respuesta.acertada = true; 
+        this.ultima_respuesta.opcion_elegida = this.preguntas[this.preguntaActual]['r-c'];
         return true;
       break;
     }
