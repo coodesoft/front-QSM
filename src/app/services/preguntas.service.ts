@@ -20,6 +20,22 @@ export class PreguntasService {
     public http:   HttpClient
   ) {  }
 
+  useComodin(c,p){
+    switch(c){
+      case 0:
+      break;
+      case 1:
+      break;
+      case 2:
+        this.respuestas_correctas++;
+        this.preguntaActual ++;
+        this.ultima_respuesta.acertada = true; 
+        return true;
+      break;
+    }
+    return false;
+  }
+
   getPreguntas(){
     if (this.pLoaded) { return this.preguntas; }
 
@@ -62,7 +78,7 @@ export class PreguntasService {
 
     if (e && this.preguntas[this.preguntaActual].t != 3) { this.respuestas_correctas++; }
 
-    if (e && this.preguntas[this.preguntaActual].t == 3) { this.comodines[2].e = true; } 
+    if (e && this.preguntas[this.preguntaActual].t == 3) { this.comodines[2].e = true; }
 
     r.acertada = e;
     return r;

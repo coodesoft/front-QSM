@@ -33,9 +33,12 @@ export class FormPreguntaComponent implements OnInit {
       alert(this.pregunta.getErrors());
     }
   }
-  
-  comodin(c){
 
+  comodin(c){
+    let r = this.preguntas.useComodin(c,this.pregunta);
+    if (r){
+      this.router.navigateByUrl('/respuesta');
+    }
   }
 
   getTextSizeOp(t){
