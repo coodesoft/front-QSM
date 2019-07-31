@@ -1,5 +1,5 @@
 <div class="img-cont" (click)="reset()">
-    <img class="img-acierto" src="assets/img/fondo-ok.png" />
+    <img class="img-acierto" src="assets/img/fondo-ok.png" *ngIf="gano" />
     <img class="img-logo-gr" src="assets/img/logo.png" />
     <img class="img-sekurit" src="assets/img/sekurit.png" />
 </div>
@@ -8,13 +8,13 @@
   <div class="app-input-inner">
     <div class="app-input">
       <div class="app-input-inner">
-        <div style="text-align:center; width:1920px;"><h2 style="font-size: 72px;">FELICIDADES, ¡GANASTE!</h2></div>
+        <div style="text-align:center; width:1920px;"><h2 style="font-size: 72px;">{{text_tit}}</h2></div>
       </div>
     </div>
 
     <div class="app-input">
       <div class="app-input-inner">
-        <div style="text-align:center; width:1920px;"><h2 style="font-size: 45px;">RETIRÁ TU PREMIO</h2></div>
+        <div style="text-align:center; width:1920px;"><h2 style="font-size: 45px;">{{text_des}}</h2></div>
       </div>
     </div>
   </div>
