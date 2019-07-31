@@ -10,12 +10,16 @@ import { PreguntasService } from './../services/preguntas.service';
 })
 export class PantallaFinalComponent implements OnInit {
 
+  public gano:boolean = false;
+
   constructor(
     public preguntas: PreguntasService,
     public router:    Router
   ) { }
 
   ngOnInit() {
+    this.gano = this.preguntas.gano_fase2 && this.preguntas.preguntaActual == 5;
+    
   }
 
   reset(){

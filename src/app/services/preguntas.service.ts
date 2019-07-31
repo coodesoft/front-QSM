@@ -19,6 +19,8 @@ export class PreguntasService {
   public ultima_respuesta:any;
   public respuestas_correctas  = 0;
   public position_ini_opc      = [{'x':70,'y':819},{'x':980,'y':818},{'x':70,'y':940},{'x':980,'y':940}];
+  public gano_fase1:boolean    = false;
+  public gano_fase2:boolean    = false;
 
   constructor(
     public http:   HttpClient
@@ -57,7 +59,7 @@ export class PreguntasService {
 
       case 1: //"la gente"
         this.comodines[c].a = true;
-        let aux             = this.preguntas[this.preguntaActual]['r-c'];
+        let aux             = Number(this.preguntas[this.preguntaActual]['r-c']);
         if ( Math.floor(Math.random() * (100 - 0)) > this.config.comodines.porc_comodin_gente ){
           for (let j=0; j < 4; j++){
             let aux2 = Math.floor(Math.random() * (3 - 0));
@@ -131,8 +133,11 @@ export class PreguntasService {
 
     if (e && this.preguntas[this.preguntaActual].t == 3) { this.comodines[2].e = true; }
 
+    this.gano_fase1 = this.respuestas_correctas == 3 && this.preguntaActual == 3;
+    this.gano_fase2 = this.respuestas_correctas == 5 && this.preguntaActual == 5;
+
     this.comodines[0].a = false;
-    this.comodines[1].a = false;  
+    this.comodines[1].a = false;
     r.acertada          = e;
     return r;
   }

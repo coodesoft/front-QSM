@@ -23,15 +23,15 @@ export class VistaRespuestaComponent implements OnInit {
   }
 
   goToPregunta(){
-      if (this.preguntas.respuestas_correctas == 3 && this.preguntas.preguntaActual == 3) {
-        this.router.navigateByUrl('/premio1');
-      } else {
-        this.router.navigateByUrl('/pregunta');
+      if (this.preguntas.preguntaActual == 3) {
+        this.router.navigateByUrl('/premio1'); return true;
       }
 
-      if (this.preguntas.respuestas_correctas == 5 && this.preguntas.preguntaActual == 5){
-        this.router.navigateByUrl('/final');
+      if (this.preguntas.preguntaActual == 5){
+        this.router.navigateByUrl('/final'); return true;
       }
+
+      this.router.navigateByUrl('/pregunta');
   }
 
 }

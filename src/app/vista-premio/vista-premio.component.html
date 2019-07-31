@@ -1,5 +1,5 @@
-<div class="img-cont">
-    <img class="img-acierto" src="assets/img/fondo-ok.png" />
+<div class="img-cont" (click)="reset()">
+    <img class="img-acierto" src="assets/img/fondo-ok.png" *ngIf="gano"/>
     <img class="img-logo-gr" src="assets/img/logo.png" />
     <img class="img-sekurit" src="assets/img/sekurit.png" />
 </div>
@@ -8,17 +8,17 @@
   <div class="app-input-inner">
     <div class="app-input">
       <div class="app-input-inner">
-        <div style="text-align:center; width:1920px;"><h2 style="font-size: 65px;">¡GANASTE!</h2></div>
+        <div style="text-align:center; width:1920px;"><h2 style="font-size: 65px;">{{text_tit}}</h2></div>
       </div>
     </div>
 
     <div class="app-input">
       <div class="app-input-inner">
-        <div style="text-align:center; width:1920px;"><h2 style="font-size: 34px;">PODÉS RETIRAR TU PREMIO O SEGUIR AL PREMIO MAYOR</h2></div>
+        <div style="text-align:center; width:1920px;"><h2 style="font-size: 34px;">{{text_des}}</h2></div>
       </div>
     </div>
 
-    <div class="app-input">
+    <div class="app-input" *ngIf="gano">
       <div class="app-input-inner">
         <img src="assets/img/f1/i4.png"/>
         <div class="app-input-ps" (click)="retirarPremio()" style="left:71px; height: 67px; width: 890px; top: 9px;" ></div>
