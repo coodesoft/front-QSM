@@ -15,9 +15,10 @@ export class PreguntasService {
   public urlPreguntas:string   = 'assets/config/preguntas.json';
   public urlConfig:string      = 'assets/config/config.json';
   public preguntaActual:number = -1;
-  public comodines:any         = [{'e':true, 'a':false},{'e':true},{'e':false}];
+  public comodines:any         = [{'e':true, 'a':false},{'e':true, 'a':false, 'x':'70px', 'y':'819px'},{'e':false}];
   public ultima_respuesta:any;
   public respuestas_correctas  = 0;
+  public position_ini_opc      = [{'x':70,'y':819},{'x':980,'y':818},{'x':70,'y':940},{'x':980,'y':940}];
 
   constructor(
     public http:   HttpClient
@@ -55,7 +56,16 @@ export class PreguntasService {
       break;
 
       case 1: //"la gente"
-
+        this.comodines[c].a = true;
+        let aux             = this.preguntas[this.preguntaActual]['r-c'];
+        if ( Math.floor(Math.random() * (100 - 0)) > this.config.comodines.porc_comodin_gente ){
+          for (let j=0; j < 4; j++){
+            let aux2 = Math.floor(Math.random() * (3 - 0));
+            if (aux2 != aux) { aux = aux2; break; }
+          }
+        }
+        this.comodines[c].x = this.position_ini_opc[aux].x+'px';
+        this.comodines[c].y = this.position_ini_opc[aux].y+'px';
       break;
 
       case 2: //Respuesta correcta
@@ -122,6 +132,7 @@ export class PreguntasService {
     if (e && this.preguntas[this.preguntaActual].t == 3) { this.comodines[2].e = true; }
 
     this.comodines[0].a = false;
+    this.comodines[1].a = false;  
     r.acertada          = e;
     return r;
   }

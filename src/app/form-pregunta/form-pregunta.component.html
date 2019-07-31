@@ -1,6 +1,7 @@
 <div class="img-cont">
     <img class="img-logo-gr" src="assets/img/logo.png" />
     <img class="img-sekurit" src="assets/img/sekurit.png" />
+    <img class="back-opc"    src="assets/img/f2/backopc.svg" *ngIf="pregunta.tipo != 3 && preguntas.comodines[1].a" [ngStyle]="{'top':preguntas.comodines[1].y, 'left':preguntas.comodines[1].x}"/>
 </div>
 
 <div class="comodines-cont" *ngIf="pregunta.tipo != 3">

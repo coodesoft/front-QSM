@@ -13,6 +13,8 @@
 }
 
 
+.back-opc { position:absolute; z-index: 1000; }
+
 body{ margin: 0px; }
 
 .main-div{
@@ -39,7 +41,7 @@ body{ margin: 0px; }
 .app-input-inner { position: relative; }
 
 .app-input-ps {
-  position: absolute;
+  position: absolute; z-index:2000;
   top: 23px; cursor:pointer;
   color:#fff; font-family: Gotham-BookItalic;
   font-size:25px; text-transform: uppercase;
