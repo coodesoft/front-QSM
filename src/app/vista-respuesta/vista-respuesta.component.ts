@@ -28,6 +28,10 @@ export class VistaRespuestaComponent implements OnInit {
       } else {
         this.router.navigateByUrl('/pregunta');
       }
+
+      if (this.preguntas.respuestas_correctas == 5 && this.preguntas.preguntaActual == 5){
+        this.router.navigateByUrl('/final');
+      }
   }
 
 }
