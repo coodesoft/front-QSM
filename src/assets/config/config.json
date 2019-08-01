@@ -1,5 +1,6 @@
 {
   "comodines":{
-    "porc_comodin_gente":90
+    "porc_comodin_gente":90,
+    "url_add_jugador":""
   }
 }

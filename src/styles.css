@@ -38,6 +38,10 @@ body{ margin: 0px; }
   font-family: Gotham-light;
   color: #fff; font-size: 36px;
 }
+.mat-simple-snackbar{ font-family: Gotham-light; font-size: 36px;  line-height: 50px !important; }
+.mat-simple-snackbar-action .mat-button { font-family: Gotham-bold; font-size: 36px; }
+.mat-snack-bar-container { padding: 22px 30px; max-width: 45vw !important; }
+
 .app-input-inner { position: relative; }
 
 .app-input-ps {

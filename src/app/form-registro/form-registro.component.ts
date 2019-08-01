@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Jugador }          from './../models/jugador';
 import { JugadoresService } from './../services/jugadores.service';
@@ -14,8 +15,9 @@ export class FormRegistroComponent implements OnInit {
   public jugador:Jugador = new Jugador();
 
   constructor(
-    public router:    Router,
-    public jugadores: JugadoresService
+    public router:     Router,
+    public jugadores:  JugadoresService,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -26,7 +28,9 @@ export class FormRegistroComponent implements OnInit {
       this.jugadores.addJugador(this.jugador);
       this.router.navigateByUrl('/pregunta');
     } else {
-      alert(this.jugador.getErrors());
+      this._snackBar.open(this.jugador.getErrors(), 'ACEPTAR', {
+        duration: 10000,
+      });
     }
   }
 }

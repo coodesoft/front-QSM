@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Pregunta } from './../models/pregunta';
 import { PreguntasService } from './../services/preguntas.service';
@@ -15,8 +16,9 @@ export class FormPreguntaComponent implements OnInit {
   public pregunta_actual:number = 0;
 
   constructor(
-    public router:    Router,
-    public preguntas: PreguntasService
+    public router:     Router,
+    public preguntas:  PreguntasService,
+    private _snackBar: MatSnackBar
   ) { }
 
   ngOnInit() {
@@ -30,7 +32,9 @@ export class FormPreguntaComponent implements OnInit {
       this.preguntas.setRespuesta(this.pregunta);
       this.router.navigateByUrl('/respuesta');
     } else {
-      alert(this.pregunta.getErrors());
+      this._snackBar.open(this.pregunta.getErrors(), 'ACEPTAR', {
+        duration: 10000,
+      });
     }
   }
 
