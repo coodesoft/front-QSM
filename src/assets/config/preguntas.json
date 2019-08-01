@@ -39,7 +39,7 @@
       "titulo":"¿Cuáles de estas innovaciones fue desarrollada por Sekurit?",
       "r-c":3, "t":2,
       "opciones":["Templado y laminado acústico","Clima Coat","Tecnología electrocrómica","Todas las anteriores"],
-      "explicacion":"Como parte del Grupo Saint-Gobain, con 350 años de experiencia en ingeniería y un compromiso decidido con la innovación, Saint-Gobain Sekurit es uno de los fabricantes de cristales líderes en el mundo desde hace más de 80 años. <br> Suministramos productos y servicios con un alto valor añadido en tres mercados:<br><br><span style='font-family: Gotham-ligth;'>- Vidrios para automóviles instalados originalmente por los fabricantes de automóviles (OEM)<br>- Recambios de vidrios para automóviles (aftermarket).<br>- Vidrios para vehículos de transporte (autobuses, camiones, aeronáutica).</span>"
+      "explicacion":"Como parte del Grupo Saint-Gobain, con 350 años de experiencia en ingeniería y un compromiso decidido con la innovación, Saint-Gobain Sekurit es uno de los fabricantes de cristales líderes en el mundo desde hace más de 80 años. <br> Suministramos productos y servicios con un alto valor añadido en tres mercados:<br><br><span class='gl'>- Vidrios para automóviles instalados originalmente por los fabricantes de automóviles (OEM)<br>- Recambios de vidrios para automóviles (aftermarket).<br>- Vidrios para vehículos de transporte (autobuses, camiones, aeronáutica).</span>"
     },
     {
       "titulo":"¿Cuál es el cristal del vehículo con mayor tasa de rotura?",

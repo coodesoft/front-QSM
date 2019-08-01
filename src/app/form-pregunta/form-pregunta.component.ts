@@ -52,6 +52,13 @@ export class FormPreguntaComponent implements OnInit {
     return s;
   }
 
+  getBottomOp(t){
+    let s ='5px';
+    if (String(t).length > 35){ s='7px'; }
+    if (String(t).length > 46){ s='8px'; }
+    return s;
+  }
+
   getTextSizeTit(t){
     let s = '45px';
     if (String(t).length > 50){ s='30px'; }
