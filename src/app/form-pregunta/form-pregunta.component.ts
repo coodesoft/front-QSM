@@ -66,6 +66,13 @@ export class FormPreguntaComponent implements OnInit {
     return s;
   }
 
+  getTopTit(t){
+    let s = '30px';
+    if (String(t).length > 50){ s='37px'; }
+    if (String(t).length > 90){ s='40px'; }
+    return s;
+  }
+
   setRespuesta(n){
     this.pregunta.opcion_elegida = n;
     this.goToRespuesta();
