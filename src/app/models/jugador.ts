@@ -6,7 +6,7 @@ export class Jugador {
   public Mail:string           = '';
 
 
-  public errors:string = '';
+  private errors:string = '';
   public getErrors() { return this.errors; }
 
   isValid(){

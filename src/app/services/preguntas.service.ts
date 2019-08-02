@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClient } from '@angular/common/http';
-import { Respuesta }  from './../models/respuesta';
+
+import { Respuesta }     from './../models/respuesta';
+import { ConfigService } from './config.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +10,8 @@ import { Respuesta }  from './../models/respuesta';
 export class PreguntasService {
 
   public preguntas:any;
-  public config:any;
   public pLoaded:boolean       = false;
-  public cLoaded:boolean       = false;
   public urlPreguntas:string   = 'assets/config/preguntas.json';
-  public urlConfig:string      = 'assets/config/config.json';
   public preguntaActual:number = -1;
   public comodines:any         = [{'e':true, 'a':false},{'e':true, 'a':false, 'x':'70px', 'y':'819px'},{'e':false}];
   public ultima_respuesta:any;
@@ -23,7 +21,8 @@ export class PreguntasService {
   public gano_fase2:boolean    = false;
 
   constructor(
-    public http:   HttpClient
+    public http:    HttpClient,
+    public configs: ConfigService
   ) {  }
 
   resetJuego(){
@@ -60,7 +59,7 @@ export class PreguntasService {
       case 1: //"la gente"
         this.comodines[c].a = true;
         let aux             = Number(this.preguntas[this.preguntaActual]['r-c']);
-        if ( Math.floor(Math.random() * (100 - 0)) > this.config.comodines.porc_comodin_gente ){
+        if ( Math.floor(Math.random() * (100 - 0)) > this.configs.config.comodines.porc_comodin_gente ){
           for (let j=0; j < 4; j++){
             let aux2 = Math.floor(Math.random() * (3 - 0));
             if (aux2 != aux) { aux = aux2; break; }
@@ -81,19 +80,10 @@ export class PreguntasService {
   getPreguntas(){
     if (this.pLoaded) { return this.preguntas; }
 
-    this.getConfig();
+    this.configs.getConfig();
 
     this.http.get( this.urlPreguntas ).subscribe(
       data => { this.preguntas = data; this.pLoaded = true; return this.preguntas; },
-      err  => { return false; }
-    );
-  }
-
-  getConfig(){
-    if (this.cLoaded) { return this.config; }
-
-    this.http.get( this.urlConfig ).subscribe(
-      data => { this.config = data; this.cLoaded = true; return this.config; },
       err  => { return false; }
     );
   }

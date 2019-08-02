@@ -25,8 +25,17 @@ export class FormRegistroComponent implements OnInit {
 
   goToMarcaModelo() {
     if (this.jugador.isValid()){
-      this.jugadores.addJugador(this.jugador);
-      this.router.navigateByUrl('/pregunta');
+      this.jugadores.addJugador(this.jugador).subscribe(
+        data => {
+          if (data['status'] == 'success') { this.router.navigateByUrl('/pregunta'); }
+          else {
+            this._snackBar.open(data['message'], 'ACEPTAR', {
+              duration: 10000,
+            });
+          }
+        },
+        err  => { return false; }
+      );
     } else {
       this._snackBar.open(this.jugador.getErrors(), 'ACEPTAR', {
         duration: 10000,
