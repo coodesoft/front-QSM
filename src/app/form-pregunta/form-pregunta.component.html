@@ -19,7 +19,7 @@
     <div class="app-input">
       <div class="app-input-inner">
         <img src="assets/img/p1/t1.png"/>
-        <div class="app-input-title" [ngStyle]="{'font-size':getTextSizeTit(pregunta.titulo), 'top':getTopTit(pregunta.titulo)}">{{pregunta.titulo}}</div>
+        <div class="app-input-title" [ngStyle]="{'font-size':getTextSizeTit(pregunta.titulo), 'top':getTopTit(pregunta.titulo)}" [innerHTML]="pregunta.titulo"></div>
       </div>
     </div>
 

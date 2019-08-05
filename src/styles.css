@@ -55,8 +55,8 @@ body{ margin: 0px; }
 .app-input-ps-o div { position: absolute; width: 674px; bottom: 4px; left: 45px; }
 
 .app-input-title, .app-resp-title {
-  text-align:center; width:1920px;
-  position:absolute; top:30px;
+  text-align:center; width:1687px;
+  position:absolute; top:30px; left:125px;
   text-transform: uppercase;
   color:#fff; font-size: 45px; font-family: Gotham-bold;
 }

@@ -49,13 +49,14 @@ export class FormPreguntaComponent implements OnInit {
     let s ='25px';
     if (String(t).length > 35){ s='24px'; }
     if (String(t).length > 46){ s='20px'; }
+    //if (String(t).length > 46){ s='20px'; }
     return s;
   }
 
   getBottomOp(t){
     let s ='5px';
     if (String(t).length > 35){ s='7px'; }
-    if (String(t).length > 46){ s='8px'; }
+    if (String(t).length > 54){ s='0px'; }
     return s;
   }
 
@@ -69,7 +70,7 @@ export class FormPreguntaComponent implements OnInit {
   getTopTit(t){
     let s = '30px';
     if (String(t).length > 50){ s='37px'; }
-    if (String(t).length > 90){ s='40px'; }
+    if (String(t).length > 86){ s='22px'; }
     return s;
   }
 

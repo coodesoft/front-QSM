@@ -27,10 +27,10 @@
       "titulo":"Indicar cuáles de las siguientes automotrices eligen Sekurit como equipo original:",
       "r-c":3, "t":1,
       "opciones":["Peogeot y Fiat","Mercedes Benz y Citroen","BMW y Renault","Todas las anteriores"],
-      "explicacion":"1 de cada 2 autos tiene cristales originales Sekurit. Las principales k1s automotrices nos eligen como proveedor oficial de cristales originales."
+      "explicacion":"1 de cada 2 autos tiene cristales originales Sekurit. Las principales automotrices nos eligen como proveedor oficial de cristales originales."
     },
     {
-      "titulo":"Saint-Gobain Sekurit cuenta con dos plantas en Argentina ¿Dónde se encuentran ubicadas?",
+      "titulo":"Saint-Gobain Sekurit cuenta con dos plantas en Argentina <br>¿Dónde se encuentran ubicadas?",
       "r-c":0, "t":1,
       "opciones":["Buenos Aires y Córdoba","Misiones y Buenos Aires","Córdoba y Santa Fé","Todas las anteriores"],
       "explicacion":"Sekurit está presente en 19 países con 42 plantas y 8 centros de I&D. En Argentina cuenta con 2 plantas (Campana y Córdoba) y un centro logístico (Tortuguitas) con cobertura a nivel nacional."
@@ -45,6 +45,6 @@
       "titulo":"¿Cuál es el cristal del vehículo con mayor tasa de rotura?",
       "r-c":2, "t":2,
       "opciones":["Lunetas","Laterales Traseros","Parabrisas","Laterales Delanteros"],
-      "explicacion":"<b>El parabrisas es el cristal del automóvil con mayor exposición a riesgo de rotura, seguido por los laterales y lunetas.</b> Las principales causas son: impactos recibidos durante la circulación del vehículo, desperfectos ocasionados por la climatología o actos vandálicos. En Saint-Gobain Sekurit, creemos que la seguridad hace la diferencia."
+      "explicacion":"<b>El parabrisas es el cristal del automóvil con mayor exposición a riesgo de rotura, seguido por los laterales y lunetas.</b><br> Las principales causas son: impactos recibidos durante la circulación del vehículo, desperfectos ocasionados por la climatología o actos vandálicos. En Saint-Gobain Sekurit, creemos que la seguridad hace la diferencia."
     }
 ]
