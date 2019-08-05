@@ -30,14 +30,14 @@
   <div class="app-input-inner">
     <div class="app-input">
       <div class="app-input-inner">
-        <div *ngIf="respuesta.acertada"  style="text-align:center;margin-top: 51px; width:1920px;"><h2>¡FELICITACIONES!</h2></div>
-        <div *ngIf="!respuesta.acertada" style="text-align:center;margin-top: 51px; width:1920px;"><h2>¡UPS! TU AUTO NO TIENE</h2><h2> CRISTALES SEKURIT</h2></div>
+        <div *ngIf="respuesta.acertada"  style="text-align:center;margin-top: 51px; width:1920px;"><h2>¡FELICITACIONES!</h2><h3> Tu auto está equipado con cristales originales Sekurit.</h3></div>
+        <div *ngIf="!respuesta.acertada" style="text-align:center;margin-top: 51px; width:1920px;"><h2>¡UPS!</h2></div>
       </div>
     </div>
 
     <div class="app-input">
       <div *ngIf="respuesta.acertada"  class="app-input-inner"> <img src="assets/img/f2/i3.png"/></div>
-      <div *ngIf="!respuesta.acertada" class="app-input-inner"> <img src="assets/img/f2/i5.png"/></div>
+      <!--<div *ngIf="!respuesta.acertada" class="app-input-inner"> <img src="assets/img/f2/i5.png"/></div>-->
     </div>
 
     <div class="app-input">

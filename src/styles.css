@@ -73,5 +73,6 @@ body{ margin: 0px; }
 .btn-nav-cont   {position: absolute; top: 50px;right: 100px;}
 .comodin { margin-bottom: 35px; cursor:pointer; }
 
-h2{ color:#fff; font-size: 62px; margin:0px; font-family: Gotham-bold; }
+h2, h3{ color:#fff; font-size: 62px; margin:0px; font-family: Gotham-bold; }
+h3 { font-size: 45px; }
 .gl {font-family: Gotham-ligth !important;}
