@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Respuesta }     from './../models/respuesta';
+import { Pregunta }      from './../models/pregunta';
 import { ConfigService } from './config.service';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { ConfigService } from './config.service';
 })
 export class PreguntasService {
 
-  public preguntas:any;
+  public preguntas:any         = [];
   public pLoaded:boolean       = false;
   public urlPreguntas:string   = 'assets/config/preguntas.json';
   public preguntaActual:number = -1;
@@ -19,6 +20,10 @@ export class PreguntasService {
   public position_ini_opc      = [{'x':70,'y':819},{'x':980,'y':818},{'x':70,'y':940},{'x':980,'y':940}];
   public gano_fase1:boolean    = false;
   public gano_fase2:boolean    = false;
+
+  private bolsa_preguntas:any;
+  private arr_preguntas:any;
+  private pos_azar:number = 3;  //indica el numero de pregunta sobre el cual se saca una al azar de la bolsa de preguntas
 
   constructor(
     public http:    HttpClient,
@@ -77,19 +82,38 @@ export class PreguntasService {
     return false;
   }
 
+  cargar_bolsa(){ //las preguntas de tipo 4 y no usadas se guardan en la bolsa
+    this.bolsa_preguntas = [];
+    for (let c=0; c < this.arr_preguntas.length;c++){
+      if (this.arr_preguntas[c].t == 4){ this.bolsa_preguntas.push(this.arr_preguntas[c]); }
+    }
+  }
+
+  cargar_preguntas(){
+    for (let c=0; c < this.arr_preguntas.length;c++){
+      if (this.arr_preguntas[c].t != 4){ this.preguntas.push(this.arr_preguntas[c]); }
+    }
+    this.cargar_bolsa();
+  }
+
   getPreguntas(){
     if (this.pLoaded) { return this.preguntas; }
 
     this.configs.getConfig();
 
     this.http.get( this.urlPreguntas ).subscribe(
-      data => { this.preguntas = data; this.pLoaded = true; return this.preguntas; },
+      data => { this.arr_preguntas = data; this.cargar_preguntas(); this.pLoaded = true; return this.preguntas; },
       err  => { return false; }
     );
   }
 
   getSigPregunta(){
     this.preguntaActual ++;
+    if (this.preguntaActual > this.pos_azar){
+      let n  = Math.floor(Math.random() * (this.bolsa_preguntas.length - 0));
+      this.preguntas[this.preguntaActual] = this.bolsa_preguntas[n];
+      this.bolsa_preguntas.splice(n,1);
+    }
     return this.preguntas[this.preguntaActual];
   }
 
