@@ -12,6 +12,7 @@ import { Respuesta }        from './../models/respuesta';
 export class VistaRespuestaComponent implements OnInit {
 
   public respuesta = new Respuesta();
+  public audio:any;
 
   constructor(
     public router: Router,
@@ -20,6 +21,10 @@ export class VistaRespuestaComponent implements OnInit {
 
   ngOnInit() {
     this.respuesta = this.preguntas.getRespuesta();
+    this.audio = new Audio();
+    if(this.respuesta.acertada) { this.audio.src = "./assets/snd/aplauso.mp3"; } else { this.audio.src = "./assets/snd/fail.mp3"; }
+    this.audio.load();
+    this.audio.play();
   }
 
   goToPregunta(){
