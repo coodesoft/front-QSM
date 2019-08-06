@@ -23,7 +23,7 @@ export class FormRegistroComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToMarcaModelo() {this.router.navigateByUrl('/pregunta');
+  goToMarcaModelo() {
     if (this.jugador.isValid()){
       this.jugadores.addJugador(this.jugador).subscribe(
         data => {
