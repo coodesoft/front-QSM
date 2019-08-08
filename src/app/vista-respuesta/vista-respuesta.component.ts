@@ -22,7 +22,7 @@ export class VistaRespuestaComponent implements OnInit {
   ngOnInit() {
     this.respuesta = this.preguntas.getRespuesta();
     this.audio = new Audio();
-    if(this.respuesta.acertada) { this.audio.src = "./assets/snd/aplauso.mp3"; } else { this.audio.src = "./assets/snd/fail.mp3"; }
+    if(this.respuesta.acertada) { this.audio.src = "./assets/snd/aplauso1.mp3"; } else { this.audio.src = "./assets/snd/fail.mp3"; }
     this.audio.load();
     this.audio.play();
   }

@@ -65,7 +65,7 @@ body{ margin: 0px; }
 .app-f2-title{ font-size: 34px; }
 .resp-cont{ position:absolute; width:1920px; top: 543px;}
 .app-desc-cont { width: 100%; position: absolute; margin-top: 140px; }
-.app-desc-text { color: #fff; text-transform: uppercase; width: 1450px; margin-left: 242px; font-size: 25px; font-family: Gotham-black; text-align: center;}
+.app-desc-text { color: #fff; line-height: 43px; text-transform: uppercase; width: 1450px; margin-left: 242px; font-size: 25px; font-family: Gotham-black; text-align: center;}
 
 .num-pregunta{ top: 218px; left: 952px;position:absolute; color:#a77846; font-size:52px; font-family: Gotham-black; }
 

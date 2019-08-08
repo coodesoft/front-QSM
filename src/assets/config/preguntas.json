@@ -21,13 +21,13 @@
       "titulo":"¿Qué es Sekurit?",
       "r-c":3, "t":1,
       "opciones":["Servicios de vigilancia","Fabricante de cristales no originales para el automóvil","Fabricante de neumáticos","Fabricación de cristales originales para el automóvil"],
-      "explicacion":"Saint-Gobain Sekurit aporta soluciones que mejoran la seguridad, proporcionan confort diario y responden a las demandas de la industria automotriz en terminios de evolución, usos, regulaciones y sostenibilidad. <br><br> Saint-Gobain Sekurit es líder en la fabricación de cristales originales para el mercado automotriz en Latinoamérica."
+      "explicacion":"Saint-Gobain Sekurit es líder en la fabricación de cristales originales para el mercado automotriz en Latinoamérica.<br>Saint-Gobain Sekurit aporta soluciones que mejoran la seguridad, proporcionan confort diario y responden a las demandas de la industria automotriz en términos de evolución, usos, regulaciones y sostenibilidad."
     },
     {
       "titulo":"Indicar cuáles de las siguientes automotrices eligen Sekurit como equipo original:",
       "r-c":3, "t":1,
       "opciones":["Peogeot y Fiat","Mercedes Benz y Citroen","BMW y Renault","Todas las anteriores"],
-      "explicacion":"1 de cada 2 autos tiene cristales originales Sekurit. Las principales automotrices nos eligen como proveedor oficial de cristales originales."
+      "explicacion":"1 de cada 2 autos tiene cristales originales Sekurit.<br>Somos proveedores oficiales de las principales automotrices."
     },
     {
       "titulo":"Saint-Gobain Sekurit cuenta con dos plantas en Argentina <br>¿Dónde se encuentran ubicadas?",
@@ -45,13 +45,13 @@
       "titulo":"¿Cuál es el cristal del vehículo con mayor tasa de rotura?",
       "r-c":2, "t":4, "u":false,
       "opciones":["Lunetas","Laterales Traseros","Parabrisas","Laterales Delanteros"],
-      "explicacion":"<b>El parabrisas es el cristal del automóvil con mayor exposición a riesgo de rotura, seguido por los laterales y lunetas.</b><br> Las principales causas son: impactos recibidos durante la circulación del vehículo, desperfectos ocasionados por la climatología o actos vandálicos. En Saint-Gobain Sekurit, creemos que la seguridad hace la diferencia."
+      "explicacion":"El parabrisas es el cristal del automóvil con mayor exposición a riesgo de rotura, seguido por los laterales y lunetas.<br>Las principales causas son: impactos recibidos durante la circulación del vehículo, desperfectos ocasionados por la climatología o actos vandálicos.<br>En Saint-Gobain Sekurit, creemos que la seguridad hace la diferencia."
     },
     {
       "titulo":"Indique hace cuantos años Saint Gobain Sekurit produce cristales para la industria automotriz:",
       "r-c":1, "t":4, "u":false,
       "opciones":["34 años","80 años","20 años","15 años"],
-      "explicacion":"Saint-Gobain Sekurit es uno de los fabricantes de cristales líderes en el mundo desde hace más de 80 años. Como parte del grupo Saint-Gobain, tenemos acceso a más de 350 años de experiencia y conocimientos prácticos. Suministramos productos y servicios de alto valor añadido."
+      "explicacion":"Saint-Gobain Sekurit es uno de los fabricantes de cristales líderes en el mundo desde hace más de 80 años.<br>Como parte del grupo Saint-Gobain, tenemos acceso a más de 350 años de experiencia y conocimientos prácticos. "
     },
     {
       "titulo":"¿Cuantas fabricas tiene Sekurit alrededor del mundo? ",
