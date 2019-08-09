@@ -27,9 +27,10 @@
     <div class="app-input">
       <div class="app-input-inner">
         <img src="assets/img/p1/o1.png"/>
-        <div class="app-input-ps" style="left:150px"  (click)="setRespuesta(0)"><div class="app-input-ps-l">A:</div><div class="app-input-ps-o">
+        <div class="app-input-ps" style="left:150px"  [@options_opc]="opc_anim_std[0]" (click)="setRespuesta(0)"><div class="app-input-ps-l">A:</div><div class="app-input-ps-o">
           <div [ngStyle]="{'font-size':getTextSizeOp(pregunta.opciones[0].t), 'bottom':getBottomOp(pregunta.opciones[0].t)}">{{pregunta.opciones[0].t}}</div></div></div>
-        <div class="app-input-ps" style="left:1070px" (click)="setRespuesta(1)"><div class="app-input-ps-l">B:</div><div class="app-input-ps-o">
+
+        <div class="app-input-ps" style="left:1070px" [@options_opc]="opc_anim_std[1]" (click)="setRespuesta(1)"><div class="app-input-ps-l">B:</div><div class="app-input-ps-o">
           <div [ngStyle]="{'font-size':getTextSizeOp(pregunta.opciones[1].t), 'bottom':getBottomOp(pregunta.opciones[1].t)}">{{pregunta.opciones[1].t}}</div></div></div>
       </div>
     </div>
@@ -37,9 +38,10 @@
     <div class="app-input" *ngIf="!preguntas.comodines[0].a">
       <div class="app-input-inner">
         <img src="assets/img/p1/o1.png"/>
-        <div class="app-input-ps" style="left:150px"  (click)="setRespuesta(2)"><div class="app-input-ps-l">C:</div><div class="app-input-ps-o">
+        <div class="app-input-ps" style="left:150px"  [@options_opc]="opc_anim_std[2]" (click)="setRespuesta(2)"><div class="app-input-ps-l">C:</div><div class="app-input-ps-o">
           <div [ngStyle]="{'font-size':getTextSizeOp(pregunta.opciones[2].t), 'bottom':getBottomOp(pregunta.opciones[2].t)}">{{pregunta.opciones[2].t}}</div></div></div>
-        <div class="app-input-ps" style="left:1070px" (click)="setRespuesta(3)"><div class="app-input-ps-l">D:</div><div class="app-input-ps-o">
+
+        <div class="app-input-ps" style="left:1070px" [@options_opc]="opc_anim_std[3]" (click)="setRespuesta(3)"><div class="app-input-ps-l">D:</div><div class="app-input-ps-o">
           <div [ngStyle]="{'font-size':getTextSizeOp(pregunta.opciones[3].t), 'bottom':getBottomOp(pregunta.opciones[3].t)}">{{pregunta.opciones[3].t}}</div></div></div>
       </div>
     </div>

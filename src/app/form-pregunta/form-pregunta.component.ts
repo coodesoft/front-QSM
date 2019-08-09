@@ -17,6 +17,13 @@ import { PreguntasService } from './../services/preguntas.service';
       transition('initial=>final', animate('300ms')),
       transition('final=>initial', animate('300ms'))
     ]),
+
+    trigger('options_opc', [
+      state('initial', style({ opacity: '0' })),
+      state('final',   style({ opacity: '1' })),
+      transition('initial=>final', animate('2000ms')),
+      transition('final=>initial', animate('2000ms'))
+    ]),
   ]
 })
 export class FormPreguntaComponent implements OnInit {
@@ -26,6 +33,8 @@ export class FormPreguntaComponent implements OnInit {
   public opcion_select:any      = {'a':false, 'x':0, 'y':0, 'd':'hidden'};
 
   private audio:any;
+  private a_opc:number = 0;
+  public opc_anim_std = ['initial','initial','initial','initial'];
 
   constructor(
     public router:     Router,
@@ -37,6 +46,11 @@ export class FormPreguntaComponent implements OnInit {
     this.pregunta        = new Pregunta(this.preguntas.getSigPregunta());
     this.pregunta_actual = this.preguntas.getNumberActual();
     this.opcion_select.a = false;
+
+    setTimeout(()=>{ this.opc_anim_std[0] = 'final'; }, 200);
+    setTimeout(()=>{ this.opc_anim_std[1] = 'final'; }, 2000);
+    setTimeout(()=>{ this.opc_anim_std[2] = 'final'; }, 4000);
+    setTimeout(()=>{ this.opc_anim_std[3] = 'final'; }, 6000);
   }
 
   goToRespuesta(){
@@ -49,6 +63,16 @@ export class FormPreguntaComponent implements OnInit {
         duration: 10000,
       });
     }
+  }
+
+  trigger_anim_opc(n){
+    //if (n <= this.a_opc) { return 'void'; }
+    return 'final';
+  }
+
+  sig_anim_opc( e: AnimationEvent){
+    //console.log(e.totalTime);
+  //  if(e.totalTime) { this.a_opc ++; }
   }
 
   comodin(c){
