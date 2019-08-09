@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 import { Pregunta } from './../models/pregunta';
 import { PreguntasService } from './../services/preguntas.service';
@@ -8,12 +9,23 @@ import { PreguntasService } from './../services/preguntas.service';
 @Component({
   selector: 'app-form-pregunta',
   templateUrl: './form-pregunta.component.html',
-  styleUrls: ['./form-pregunta.component.css']
+  styleUrls: ['./form-pregunta.component.css'],
+  animations: [
+    trigger('change_backgr', [
+      state('initial', style({ opacity: '0' })),
+      state('final',   style({ opacity: '1' })),
+      transition('initial=>final', animate('300ms')),
+      transition('final=>initial', animate('300ms'))
+    ]),
+  ]
 })
 export class FormPreguntaComponent implements OnInit {
 
-  public pregunta:Pregunta = new Pregunta();
+  public pregunta:Pregunta      = new Pregunta();
   public pregunta_actual:number = 0;
+  public opcion_select:any      = {'a':false, 'x':0, 'y':0, 'd':'hidden'};
+
+  private audio:any;
 
   constructor(
     public router:     Router,
@@ -24,6 +36,7 @@ export class FormPreguntaComponent implements OnInit {
   ngOnInit() {
     this.pregunta        = new Pregunta(this.preguntas.getSigPregunta());
     this.pregunta_actual = this.preguntas.getNumberActual();
+    this.opcion_select.a = false;
   }
 
   goToRespuesta(){
@@ -74,9 +87,41 @@ export class FormPreguntaComponent implements OnInit {
     return s;
   }
 
+  display_comodin_img(){
+    if (this.pregunta.tipo == 3)       { return 'hidden';  }
+    if (this.preguntas.comodines[1].a) { return 'visible'; }
+    return 'hidden';
+  }
+
+  display_optbk_img(){
+    if (this.pregunta.tipo == 3) { return 'hidden';  }
+    if (this.opcion_select.a)    { return 'visible'; }
+    return 'hidden';
+  }
+
+  set_anim_comodin(){
+    if (this.preguntas.comodines[1].a) { return 'final'; } return 'initial';
+  }
+
+  set_anim_option(){
+    if (this.opcion_select.a) { return 'final'; } return 'initial';
+  }
+
   setRespuesta(n){
-    this.pregunta.opcion_elegida = n;
-    this.goToRespuesta();
+    this.opcion_select.a = true;
+    this.opcion_select.d = 'visible';
+    this.opcion_select.x = this.preguntas.position_ini_opc[n].x+'px';
+    this.opcion_select.y = this.preguntas.position_ini_opc[n].y+'px';
+
+    this.audio           = new Audio();
+    this.audio.src       = "./assets/snd/opcion_select.mp3";
+    this.audio.load();
+    this.audio.play();
+
+    setTimeout(()=>{
+      this.pregunta.opcion_elegida = n;
+      this.goToRespuesta();
+    }, 4000);
   }
 
 }

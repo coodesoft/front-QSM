@@ -62,8 +62,7 @@ export class PreguntasService {
       break;
 
       case 1: //"la gente"
-        this.comodines[c].a = true;
-        let aux             = Number(this.preguntas[this.preguntaActual]['r-c']);
+        let aux = Number(this.preguntas[this.preguntaActual]['r-c']);
         if ( Math.floor(Math.random() * (100 - 0)) > this.configs.config.comodines.porc_comodin_gente ){
           for (let j=0; j < 4; j++){
             let aux2 = Math.floor(Math.random() * (3 - 0));
@@ -72,6 +71,7 @@ export class PreguntasService {
         }
         this.comodines[c].x = this.position_ini_opc[aux].x+'px';
         this.comodines[c].y = this.position_ini_opc[aux].y+'px';
+        this.comodines[c].a = true;
       break;
 
       case 2: //Respuesta correcta
