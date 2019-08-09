@@ -27,6 +27,12 @@ export class VistaRespuestaComponent implements OnInit {
     this.audio.play();
   }
 
+
+  getFInterlineado(s){
+    if (String(s).length > 490){ return '43px'; }
+    return '55px';
+  }
+
   goToPregunta(){
       if (this.preguntas.preguntaActual == 3) {
         this.router.navigateByUrl('/premio1'); return true;

@@ -21,8 +21,8 @@ import { PreguntasService } from './../services/preguntas.service';
     trigger('options_opc', [
       state('initial', style({ opacity: '0' })),
       state('final',   style({ opacity: '1' })),
-      transition('initial=>final', animate('2000ms')),
-      transition('final=>initial', animate('2000ms'))
+      transition('initial=>final', animate('1000ms')),
+      transition('final=>initial', animate('1000ms'))
     ]),
   ]
 })
@@ -48,9 +48,9 @@ export class FormPreguntaComponent implements OnInit {
     this.opcion_select.a = false;
 
     setTimeout(()=>{ this.opc_anim_std[0] = 'final'; }, 200);
-    setTimeout(()=>{ this.opc_anim_std[1] = 'final'; }, 2000);
-    setTimeout(()=>{ this.opc_anim_std[2] = 'final'; }, 4000);
-    setTimeout(()=>{ this.opc_anim_std[3] = 'final'; }, 6000);
+    setTimeout(()=>{ this.opc_anim_std[1] = 'final'; }, 1000);
+    setTimeout(()=>{ this.opc_anim_std[2] = 'final'; }, 2000);
+    setTimeout(()=>{ this.opc_anim_std[3] = 'final'; }, 3000);
   }
 
   goToRespuesta(){

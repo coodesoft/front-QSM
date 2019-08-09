@@ -56,7 +56,7 @@ body{ margin: 0px; }
 
 .app-input-title, .app-resp-title {
   text-align:center; width:1687px;
-  position:absolute; top:30px; left:125px;
+  position:absolute; top:173px; left:125px;
   text-transform: uppercase;
   color:#fff; font-size: 45px; font-family: Gotham-bold;
 }
@@ -64,7 +64,7 @@ body{ margin: 0px; }
 .app-resp-title{ font-size: 62px; }
 .app-f2-title{ font-size: 34px; }
 .resp-cont{ position:absolute; width:1920px; top: 543px;}
-.app-desc-cont { width: 100%; position: absolute; margin-top: 140px; }
+.app-desc-cont { width: 100%; position: absolute; margin-top: 250px; }
 .app-desc-text { color: #fff; line-height: 55px; text-transform: uppercase; width: 1450px; margin-left: 242px; font-size: 25px; font-family: Gotham-light; font-weight: bold; text-align: center;}
 
 .num-pregunta{ top: 218px; left: 952px;position:absolute; color:#a77846; font-size:52px; font-family: Gotham-black; }

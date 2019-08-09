@@ -15,7 +15,7 @@
 
     <div class="app-input">
       <div class="app-desc-cont">
-        <div class="app-desc-text" [innerHTML]="respuesta.explicacion"></div>
+        <div class="app-desc-text" [ngStyle]="{'line-height':getFInterlineado(respuesta.explicacion) }" [innerHTML]="respuesta.explicacion"></div>
       </div>
     </div>
 
