@@ -1,7 +1,7 @@
 [
     {
       "titulo":"Seleccioná la marca de tu auto y modelo, y si tu auto es SEKURIT ganás un comodín.",
-      "r-c":-1, "t":3,
+      "r-c":-1, "t":3, "l":"",
       "opciones":[
         { "k1":"Peugeot","k2":["208","2008","301","308","Partner","408"] },
         { "k1":"Renault", "k2":["Nuevo Sandero","Kwid","Duster","Nuevo Logan","Captur","Kangoo ii","Duster Oroch"] },
@@ -19,31 +19,31 @@
     },
     {
       "titulo":"¿Qué es Sekurit?",
-      "r-c":3, "t":1,
+      "r-c":3, "t":1, "l":"",
       "opciones":["Servicios de vigilancia","Fabricante de cristales no originales para el automóvil","Fabricante de neumáticos","Fabricación de cristales originales para el automóvil"],
       "explicacion":"Saint-Gobain Sekurit es líder en la fabricación de cristales originales para el mercado automotriz en Latinoamérica.<br>Saint-Gobain Sekurit aporta soluciones que mejoran la seguridad, proporcionan confort diario y responden a las demandas de la industria automotriz en términos de evolución, usos, regulaciones y sostenibilidad."
     },
     {
       "titulo":"Indicar cuáles de las siguientes automotrices eligen Sekurit como equipo original:",
-      "r-c":3, "t":1,
+      "r-c":3, "t":1, "l":"",
       "opciones":["Peogeot y Fiat","Mercedes Benz y Citroen","BMW y Renault","Todas las anteriores"],
       "explicacion":"1 de cada 2 autos tiene cristales originales Sekurit.<br>Somos proveedores oficiales de las principales automotrices."
     },
     {
       "titulo":"Saint-Gobain Sekurit cuenta con dos plantas en Argentina <br>¿Dónde se encuentran ubicadas?",
-      "r-c":0, "t":1,
+      "r-c":0, "t":1, "l":"",
       "opciones":["Buenos Aires y Córdoba","Misiones y Buenos Aires","Córdoba y Santa Fé","Todas las anteriores"],
       "explicacion":"Sekurit está presente en 19 países con 42 plantas y 8 centros de I&D. En Argentina cuenta con 2 plantas (Campana y Córdoba) y un centro logístico (Tortuguitas) con cobertura a nivel nacional."
     },
     {
       "titulo":"¿Cuáles de estas innovaciones fue desarrollada por Sekurit?",
-      "r-c":3, "t":4, "u":false,
+      "r-c":3, "t":4, "u":false, "l":"",
       "opciones":["Templado y laminado acústico","Clima Coat","Tecnología electrocrómica","Todas las anteriores"],
       "explicacion":"Como parte del Grupo Saint-Gobain, con 350 años de experiencia en ingeniería y un compromiso decidido con la innovación, Saint-Gobain Sekurit es uno de los fabricantes de cristales líderes en el mundo desde hace más de 80 años."
     },
     {
       "titulo":"¿Cuál es el cristal del vehículo con mayor tasa de rotura?",
-      "r-c":2, "t":4, "u":false,
+      "r-c":2, "t":4, "u":false, "l":"",
       "opciones":["Lunetas","Laterales Traseros","Parabrisas","Laterales Delanteros"],
       "explicacion":"El parabrisas es el cristal del automóvil con mayor exposición a riesgo de rotura, seguido por los laterales y lunetas.<br>Las principales causas son: impactos recibidos durante la circulación del vehículo, desperfectos ocasionados por la climatología o actos vandálicos.<br>En Saint-Gobain Sekurit, creemos que la seguridad hace la diferencia."
     },
@@ -55,19 +55,19 @@
     },
     {
       "titulo":"¿Cuantas fabricas tiene Sekurit alrededor del mundo? ",
-      "r-c":2, "t":4, "u":false,
+      "r-c":2, "t":4, "u":false, "l":"",
       "opciones":["30","25","42","6"],
       "explicacion":"Saint-Gobain Sekurit está presente en 19 países con 42 plantas y 8 centros de I&D. En Argentina cuenta con 2 plantas (Campana y Córdoba) y un centro logístico (Tortuguitas) con cobertura a nivel nacional. Las innovaciones son parte de nuestra estrategia y la clave de nuestro éxito."
     },
     {
       "titulo":"¿Qué es SIROS?",
-      "r-c":1, "t":4, "u":false,
+      "r-c":1, "t":4, "u":false, "l":"assets/img/SirosLogo.png",
       "opciones":["Sistema Robótico de Sekurit","Servicio Integral de Reposición Original Sekurit","Sistema Integral de Recibos Originales","Un sistema de celulares"],
-      "explicacion":"Sekurit Argentina suma al mercado de seguros su propuesta de servicio integral de reposición de cristales originales (SIROS) con el desarrollo de un sistema de atención y una red de instaladores que da cobertura en todo el país. Buscamos que las compañías, cuenten con la reposición de una pieza original del vehículo. SIROS cuenta con servicio web, un call center exclusivo para las aseguradoras, garantía de calidad original y la gestión desde el siniestro hasta la finalización de la reposición."
+      "explicacion":"Sekurit Argentina suma al mercado de seguros su propuesta de servicio integral de reposición de cristales originales (SIROS) con el desarrollo de un sistema de atención y una red de instaladores que da cobertura en todo el país.<br>SIROS cuenta con servicio web, un call center exclusivo para las aseguradoras, garantía de calidad original y la gestión desde el siniestro hasta la finalización de la reposición. "
     },
     {
       "titulo":"¿Cuáles de estos nuevos lanzamientos son equipados por Sekurit?",
-      "r-c":3, "t":4, "u":false,
+      "r-c":3, "t":4, "u":false, "l":"",
       "opciones":["T-Cross","W-rv","Frontier","Todas las anteriores"],
       "explicacion":"1 de cada 2 autos tiene Sekurit. Somos proveedores oficiales de las principales marcas automotrices."
     }

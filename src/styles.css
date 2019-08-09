@@ -17,6 +17,10 @@
 
 body{ margin: 0px; }
 
+.img-logo-preg{
+  position: absolute; width: auto; height: 167px; top: -231px; left: 743px;
+}
+
 .main-div{
   position: relative;
   width:1920px; height:1080px;

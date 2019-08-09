@@ -6,12 +6,14 @@ export class Pregunta {
   public titulo:string = '';
   public explicacion:string = '';
   public opciones:any = {};
+  public l:string     = '';
 
   constructor(e:any = ''){
     if (e!='') {
       this.tipo        = e.t;
       this.titulo      = e.titulo;
       this.explicacion = e.explicacion;
+      this.l           = e.l;
 
       for (let c=0; c < e.opciones.length; c++){
         this.opciones[c] = {'e':true, 't':e.opciones[c]};

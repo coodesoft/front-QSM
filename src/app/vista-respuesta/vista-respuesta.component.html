@@ -15,6 +15,7 @@
 
     <div class="app-input">
       <div class="app-desc-cont">
+        <img class="img-logo-preg" *ngIf="respuesta.l != ''" src="{{respuesta.l}}" />
         <div class="app-desc-text" [ngStyle]="{'line-height':getFInterlineado(respuesta.explicacion) }" [innerHTML]="respuesta.explicacion"></div>
       </div>
     </div>
