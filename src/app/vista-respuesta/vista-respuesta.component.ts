@@ -36,6 +36,11 @@ export class VistaRespuestaComponent implements OnInit {
         this.router.navigateByUrl('/final'); return true;
       }
 
+      if (!this.respuesta.acertada && this.respuesta.tipo != 3){
+        this.preguntas.resetJuego();
+        this.router.navigateByUrl('/final'); return true;
+      }
+
       this.router.navigateByUrl('/pregunta');
   }
 
