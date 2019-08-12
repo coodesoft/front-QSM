@@ -17,6 +17,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PantallaFinalComponent } from './pantalla-final/pantalla-final.component';
+import { BigScreenModule } from 'angular-bigscreen';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,8 @@ import { PantallaFinalComponent } from './pantalla-final/pantalla-final.componen
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule,
-    MatSnackBarModule
+    MatCardModule, MatSnackBarModule,
+    BigScreenModule
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
